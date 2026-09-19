@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  organization: string;
+  startDate: string;
+  endDate?: string; // optional, in case something is "Present" or ongoing
+  description?: string;
+  tags?: string[]; // optional array of strings
+}
+
+const { title, organization, startDate, endDate = "Present", description, tags = [] } = Astro.props;
+---
+
+<div class="p-[32px]">
+  <div class="flex flex-wrap justify-between items-baseline">
+    <h3 class="">{title}</h3>
+    <span class="">{startDate} — {endDate}</span>
+  </div>
+  <p class="">{organization}</p>
+  <p class="">{description}</p>
+  {tags.length > 0 && (
+    <div class="flex gap-2">
+      {tags.map((tag) => (
+        <span class="text-xs font-mono px-2 py-1 border border-gray-300 rounded">{tag}</span>
+      ))}
+    </div>
+  )}
+</div>
