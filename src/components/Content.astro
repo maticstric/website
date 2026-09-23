@@ -3,13 +3,13 @@ import TimelineEntry from './TimelineEntry.astro'
 ---
 <main class="lg:ml-[532px] lg:pt-24">
   <div id="about" class="space-y-4">
-    <h2 class="block lg:hidden">ABOUT</h2>
+    <h3 class="block lg:hidden">ABOUT</h3>
     <p>I'm a software engineer who enjoys building clean, functional interfaces — the kind of thing that looks simple on the surface but has a surprising amount of thought behind the details. I care about writing code that's still easy to read six months later, which usually means more time spent naming things well than actually writing logic.</p>
     <p>Lately I've been exploring how far I can push a simple design system before it stops being simple, and I have a habit of turning "quick weekend projects" into small obsessions that take three weeks longer than planned.</p>
     <p>When I'm not at a keyboard, I'm probably applying that same instinct to some other hobby — figuring out the most needlessly precise way to do something that didn't need to be precise at all.</p>
   </div>
-  <div id="education-work" class="my-8">
-    <h2 class="block lg:hidden">EDUCATION & WORK</h2>
+  <div id="education" class="my-8">
+    <h3 class="block lg:hidden">EDUCATION</h3>
     <TimelineEntry
       title="MSc in Computer Science"
       organization="University of California, Davis"
@@ -23,11 +23,14 @@ import TimelineEntry from './TimelineEntry.astro'
       endDate="Dec 2020"
       description="Summa cum laude"
     />
+  </div>
+  <div id="work" class="my-8">
+    <h3 class="block lg:hidden">WORK</h3>
     <TimelineEntry
       title="Programmer Analyst"
       organization="Oregon Bankruptcy Court"
       startDate="Aug 2026"
-      description="Promoted into an expanded programming and analysis role.Promoted into an expanded programming and analysis role.Promoted into an expanded programming and analysis role.Promoted into an expanded programming and analysis role."
+      description="Maintain and automate the court's case management systems using PowerShell and Perl. Write CMD-based scripts for system administration and batch processing of filings. Work with clerks and IT staff to ensure secure, reliable handling of bankruptcy records."
       tags={["PowerShell", "CMD", "Perl"]}
     />
     <TimelineEntry
@@ -35,6 +38,7 @@ import TimelineEntry from './TimelineEntry.astro'
       organization="Oregon Bankruptcy Court"
       startDate="Jul 2023"
       endDate="Aug 2026"
+      description="Built PowerShell automation to reduce manual work in docketing and reporting. Maintained CMD scripts for backups and scheduled maintenance. Gathered requirements from court staff and provided tier-2 support for internal tools."
       tags={["PowerShell", "CMD"]}
     />
     <TimelineEntry
@@ -42,6 +46,7 @@ import TimelineEntry from './TimelineEntry.astro'
       organization="Digital Copilot"
       startDate="Aug 2025"
       endDate="Jan 2026"
+      description="Developed interactive tools using Godot and Python at a small AI-assisted software startup. Built gameplay systems and Python-backed integrations, iterating quickly in a fast-paced, small-team environment."
       tags={["Godot", "Python"]}
     />
     <TimelineEntry
@@ -49,6 +54,7 @@ import TimelineEntry from './TimelineEntry.astro'
       organization="Standard Ebooks"
       startDate="Feb 2020"
       endDate="Apr 2023"
+      description="Wrote Python tooling to validate and typeset public-domain texts into EPUB2/EPUB3 formats. Reviewed community pull requests, mentored contributors, and improved automated QA for the project's open-source ebook pipeline."
       tags={["Python", "EPUB", "EPU3", "EPU2", "EPU1", "Open Source", "Public Domain"]}
     />
     <TimelineEntry
@@ -56,10 +62,11 @@ import TimelineEntry from './TimelineEntry.astro'
       organization="CloudMondo"
       startDate="Jun 2017"
       endDate="Jul 2017"
+      description="Short-term role building cloud-synced mobile features in Java (Android) and Swift (iOS), delivering under a compressed timeline within an agile team."
       tags={["Java", "Swift"]}
     />
   </div>
   <div id="projects" class="my-8">
-    <h2 class="block lg:hidden">PROJECTS</h2>
+    <h3 class="block lg:hidden">PROJECTS</h3>
   </div>
 </main>
