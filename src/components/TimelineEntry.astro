@@ -11,20 +11,23 @@ interface Props {
 const { title, organization, startDate, endDate = "Present", description, tags = [] } = Astro.props;
 ---
 
-<div class="lg:px-8 py-4 my-2 lg:hover:bg-gray-300">
-  <div class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-between lg:items-baseline">
-    <h3>{title}</h3>
-    <span>{startDate} — {endDate}</span>
+<div class="flex lg:px-8 py-4 my-2 lg:hover:bg-gray-200">
+  <div class="hidden lg:block lg:flex-none lg:w-[180px]">
+    <span class="text-sm -mt-[20px] inline-block">{startDate} — {endDate}</span>
   </div>
-  <p class={description ? "mb-4" : ""}>{organization}</p>
-  {description && (
-    <p class="mb-4">{description}</p>
-  )}
-  {tags.length > 0 && (
-    <div class="flex flex-wrap gap-2">
-      {tags.map((tag) => (
-        <span class="text-xs font-mono px-2 py-1 border border-gray-300 rounded">{tag}</span>
-      ))}
-    </div>
-  )}
+  <div>
+    <h3>{title}</h3>
+    <span class="block lg:hidden">{startDate} — {endDate}</span>
+    <p class={description ? "mb-4" : ""}>{organization}</p>
+    {description && (
+      <p class="mb-4">{description}</p>
+    )}
+    {tags.length > 0 && (
+      <div class="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span class="text-xs font-mono px-2 py-1 border border-gray-300 rounded">{tag}</span>
+        ))}
+      </div>
+    )}
+  </div>
 </div>
