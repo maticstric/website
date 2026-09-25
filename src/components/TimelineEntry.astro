@@ -1,11 +1,11 @@
 ---
 interface Props {
   title: string;
-  organization: string;
-  startDate: string;
-  endDate?: string; // optional, in case something is "Present" or ongoing
+  organization?: string;
+  startDate?: string;
+  endDate?: string;
   description?: string;
-  tags?: string[]; // optional array of strings
+  tags?: string[];
 }
 
 const { title, organization, startDate, endDate = "Present", description, tags = [] } = Astro.props;
@@ -13,7 +13,7 @@ const { title, organization, startDate, endDate = "Present", description, tags =
 
 <div class="flex lg:px-8 lg:py-4 lg:my-2 my-4 lg:hover:bg-gray-200">
   <div class="hidden lg:block lg:flex-none lg:w-[180px]">
-    <span class="text-sm -mt-[20px] inline-block">{startDate} – {endDate}</span>
+    <span class="text-sm">{startDate} – {endDate}</span>
   </div>
   <div>
     <h3>{title}</h3>
