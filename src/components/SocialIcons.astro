@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import GitHubImage from '../assets/GitHub.svg';
+import LinkedInImage from '../assets/LinkedIn.svg';
+import ItchIOImage from '../assets/ItchIO.svg';
+---
+
+<div class="flex mb-15 gap-6 items-center">
+  <a href="https://github.com/maticstric" target="_blank">
+    <Image src={GitHubImage} alt="GitHug logo" width="31" height="31" />
+  </a>
+  <a href="https://www.linkedin.com/in/matic-likar" target="_blank">
+    <Image src={LinkedInImage} alt="LinkedIn logo" width="28" height="28" />
+  </a>
+  <a href="https://maticstric.itch.io/" target="_blank">
+    <Image src={ItchIOImage} alt="Itch.io logo" width="30" height="30" />
+  </a>
+</div>

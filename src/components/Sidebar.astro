@@ -1,24 +1,29 @@
 ---
+import SocialIcons from './SocialIcons.astro'
 ---
-<aside class="lg:fixed lg:h-screen lg:pt-24 pt-10">
-  <!-- name, title, intro, nav, social icons -->
-  <h1 class="-ml-[2px]">Matic Likar</h1>
-  <h2 class="lg:mb-16 mb-8">Programmer</h2>
-  <ul class="hidden lg:block">
-    <li>
-      <a href="#about" class="text-sm hover:font-bold">ABOUT</a>
-    </li>
-    <li>
-      <a href="#education" class="text-sm hover:font-bold">EDUCATION</a>
-    </li>
-    <li>
-      <a href="#work" class="text-sm hover:font-bold">WORK</a>
-    </li>
-    <li>
-      <a href="#projects" class="text-sm hover:font-bold">PROJECTS</a>
-    </li>
-    <li>
-      <a href="#resume" class="text-sm hover:font-bold">RESUME</a>
-    </li>
-  </ul>
+<aside class="lg:fixed lg:h-screen lg:pt-24 pt-10 flex flex-col justify-between">
+  <div>
+    <h1 class="-ml-[2px]">Matic Likar</h1>
+    <h2 class="lg:mb-16 mb-8">Programmer</h2>
+    <ul class="hidden lg:block">
+      <li>
+        <a href="#about" class="text-sm hover:font-bold">ABOUT</a>
+      </li>
+      <li>
+        <a href="#education" class="text-sm hover:font-bold">EDUCATION</a>
+      </li>
+      <li>
+        <a href="#work" class="text-sm hover:font-bold">WORK</a>
+      </li>
+      <li>
+        <a href="#projects" class="text-sm hover:font-bold">PROJECTS</a>
+      </li>
+      <li>
+        <a href="#resume" class="text-sm hover:font-bold">RESUME</a>
+      </li>
+    </ul>
+  </div>
+  <div class="justify-end">
+    <SocialIcons />
+  </div>
 </aside>
