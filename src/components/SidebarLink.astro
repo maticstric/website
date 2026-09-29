@@ -15,10 +15,10 @@ const { text, href } = Astro.props;
       text-sm
       before:absolute
       before:top-[-4px]
-      hover:before:content-['>\20']
+      hover:before:content-['>']
     "
   >
-    <span class="inline-block transition-transform duration-200 ease-out group-hover:translate-x-3">
+    <span class="inline-block transition-transform duration-200 ease-out group-hover:translate-x-4">
       {text}
     </span>
   </a>
