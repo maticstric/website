@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 html {
-  @apply scroll-pt-22;
+  @apply scroll-pt-24;
   scroll-behavior: smooth;
 }
 

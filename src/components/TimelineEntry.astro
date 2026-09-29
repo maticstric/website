@@ -14,7 +14,7 @@ const { title, organization, startDate, endDate = "Present", description, tags =
 const TopTag = link ? "a" : "div";
 ---
 
-<TopTag href={link} target="_blank" class={`flex lg:px-8 lg:py-4 lg:my-2 my-4 ${link ? "lg:hover:bg-gray-300" : ""}`}>
+<TopTag href={link} target="_blank" class={`flex lg:px-8 lg:py-4 lg:my-2 mb-8 mt-4 ${link ? "lg:hover:bg-gray-200" : ""}`}>
   <div class="hidden lg:block lg:flex-none lg:w-45">
     <span class="text-sm">{startDate} – {endDate}</span>
   </div>
