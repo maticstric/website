@@ -1,4 +1,5 @@
 ---
+import SidebarLink from './SidebarLink.astro';
 import SocialIcons from './SocialIcons.astro'
 ---
 <aside class="lg:fixed lg:h-screen lg:pt-24 pt-10 flex flex-col justify-between">
@@ -6,21 +7,11 @@ import SocialIcons from './SocialIcons.astro'
     <h1 class="-ml-[2px]">Matic Likar</h1>
     <h2 class="lg:mb-16 mb-8">Programmer</h2>
     <ul class="hidden lg:block">
-      <li>
-        <a href="#about" class="text-sm hover:font-bold">ABOUT</a>
-      </li>
-      <li>
-        <a href="#education" class="text-sm hover:font-bold">EDUCATION</a>
-      </li>
-      <li>
-        <a href="#work" class="text-sm hover:font-bold">WORK</a>
-      </li>
-      <li>
-        <a href="#projects" class="text-sm hover:font-bold">PROJECTS</a>
-      </li>
-      <li>
-        <a href="#resume" class="text-sm hover:font-bold">RESUME</a>
-      </li>
+      <SidebarLink href="#about" text="ABOUT" />
+      <SidebarLink href="#education" text="EDUCATION" />
+      <SidebarLink href="#work" text="WORK" />
+      <SidebarLink href="#projects" text="PROJECTS" />
+      <SidebarLink href="#resume" text="RESUME" />
     </ul>
   </div>
   <div class="justify-end">

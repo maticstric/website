@@ -1,0 +1,25 @@
+---
+interface Props {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props;
+---
+<li>
+  <a
+    href={href}
+    class="
+      group
+      relative
+      text-sm
+      before:absolute
+      before:top-[-4px]
+      hover:before:content-['>\20']
+    "
+  >
+    <span class="inline-block transition-transform duration-200 ease-out group-hover:translate-x-3">
+      {text}
+    </span>
+  </a>
+</li>
