@@ -1,14 +1,17 @@
+/*@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+*/
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
 html {
   @apply scroll-pt-22;
   scroll-behavior: smooth;
 }
 
+/*
 @theme {
-  --font-sans: "Hanken Grotesk", sans-serif;
+  --font-sans: "Noto Serif", serif;
 }
+*/
 
 h1 {
   @apply text-5xl md:text-6xl lg:text-6xl font-bold;

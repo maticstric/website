@@ -6,13 +6,16 @@ interface Props {
   endDate?: string;
   description?: string;
   tags?: string[];
+  link?: string;
 }
 
-const { title, organization, startDate, endDate = "Present", description, tags = [] } = Astro.props;
+const { title, organization, startDate, endDate = "Present", description, tags = [], link } = Astro.props;
+
+const TopTag = link ? "a" : "div";
 ---
 
-<div class="flex lg:px-8 lg:py-4 lg:my-2 my-4 lg:hover:bg-gray-200">
-  <div class="hidden lg:block lg:flex-none lg:w-[180px]">
+<TopTag href={link} target="_blank" class={`flex lg:px-8 lg:py-4 lg:my-2 my-4 ${link ? "lg:hover:bg-gray-300" : ""}`}>
+  <div class="hidden lg:block lg:flex-none lg:w-45">
     <span class="text-sm">{startDate} – {endDate}</span>
   </div>
   <div>
@@ -30,4 +33,4 @@ const { title, organization, startDate, endDate = "Present", description, tags =
       </div>
     )}
   </div>
-</div>
+</TopTag>
