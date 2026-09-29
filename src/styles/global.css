@@ -1,5 +1,4 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 html {
@@ -7,14 +6,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/*
+
 @theme {
-  --font-sans: "Noto Serif", serif;
+  --font-sans: "Poppins", sans-serif;
 }
-*/
+
 
 h1 {
-  @apply text-5xl md:text-6xl lg:text-6xl font-bold;
+  @apply text-5xl md:text-6xl lg:text-6xl font-extrabold;
 }
 h2 {
   @apply text-2xl font-semibold;
