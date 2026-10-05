@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
-html {
-  @apply scroll-pt-24;
-  scroll-behavior: smooth;
-}
-
 @theme inline {
   --font-sans: var(--inter), sans-serif;
+  --color-background: #14272b;
+  --color-background-secondary: #232a2b;
+  --color-text: #ece8df;
+  --color-text-secondary: #8fa3b5;
+  --color-text-tertiary: #2d3740;
+  --color-highlight: #d9a441;
+}
+
+html {
+  @apply scroll-pt-24;
+  @apply scroll-smooth;
+  @apply bg-background text-text;
 }
 
 h1 {
