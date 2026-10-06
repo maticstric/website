@@ -18,3 +18,22 @@ import SocialIcons from './SocialIcons.astro'
     <SocialIcons />
   </div>
 </aside>
+<script>
+  const links = document.querySelectorAll('aside a[href^="#"]');
+  const sections = document.querySelectorAll('section[id]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          links.forEach((link) => link.classList.remove('active'));
+          const match = document.querySelector(`aside a[href="#${entry.target.id}"]`);
+          match?.classList.add('active');
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -70% 0px' }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+</script>

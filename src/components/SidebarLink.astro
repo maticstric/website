@@ -16,9 +16,11 @@ const { text, href } = Astro.props;
       before:absolute
       before:top-[-2px]
       hover:before:content-['>']
+      [&.active]:before:content-['>']
+      [&.active]:text-highlight
     "
   >
-    <span class="inline-block transition-transform duration-200 ease-out group-hover:translate-x-4">
+    <span class="inline-block transition-transform duration-200 ease-out group-hover:translate-x-4 group-[.active]:translate-x-4">
       {text}
     </span>
   </a>
