@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+
+import StandardEbooksLogo from '../assets/images/logos/StandardEbooksLogo.svg';
+import ProjectHeader from './ProjectHeader.astro';
+
+import CoverAgathaChristie from '../assets/images/covers/cover-agatha-christie.svg';
+import CoverErnestHemingway from '../assets/images/covers/cover-ernest-hemingway.svg';
+import CoverFritzLeiber from '../assets/images/covers/cover-fritz-leiber.svg';
+import CoverHPLovecraft from '../assets/images/covers/cover-h-p-lovecraft.svg';
+import CoverHarrietEWilson from '../assets/images/covers/cover-harriet-e-wilson.svg';
+import CoverMarkTwain from '../assets/images/covers/cover-mark-twain.svg';
+import CoverPhillisWheatley from '../assets/images/covers/cover-phillis-wheatley.svg';
+import CoverPoulAnderson from '../assets/images/covers/cover-poul-anderson.svg';
+import CoverRALafferty from '../assets/images/covers/cover-r-a-lafferty.svg';
+import CoverRayBradbury from '../assets/images/covers/cover-ray-bradbury.svg';
+import CoverRobertSheckley from '../assets/images/covers/cover-robert-sheckley.svg';
+import CoverWilliamFaulkner from '../assets/images/covers/cover-william-faulkner.svg';
+import CoverWilliamShakespeare from '../assets/images/covers/cover-william-shakespeare.svg';
+---
+<div>
+  <ProjectHeader title="Standard Ebooks" subtitle="Producing public-domain ebooks" logo={StandardEbooksLogo} custommargin="3px" />
+  <p>
+    Standard Ebooks is a volunteer-run project which produces free and open source editions of public domain ebooks.
+    It’s a really amazing organization which combines my love of open source software with my love of reading, especially books which are in the public domain.
+    Producing a book for Standard Ebooks involves following a rigorous and modern style manual to ensure they meet a professional-grade and consistent typographical standard.
+  </p>
+  <p>
+    At the heart of book production is a command line application which helps the producer automate certain steps.
+    Besides producing books, I have been able to contribute to this open source software which makes book production a smooth experience, even for non-technically minded producers.
+    After producing a few books, I was also promoted the a reviewer which involved helping new contirbutors through their first productions and signing off on them before handing them over for a final inspection.
+  </p>
+  <div class="mt-10 grid grid-cols-3 grid-rows-5 gap-8">
+    <Image src={CoverAgathaChristie} alt="Agatha Christie book cover" width="160" />
+    <Image src={CoverErnestHemingway} alt="Ernest Hemingway book cover" width="160" />
+    <Image src={CoverFritzLeiber} alt="Fritz Leiber book cover" width="160" />
+    <Image src={CoverHPLovecraft} alt="H.P. Lovecraft book cover" width="160" />
+    <Image src={CoverHarrietEWilson} alt="Harriet E. Wilson book cover" width="160" />
+    <Image src={CoverMarkTwain} alt="Mark Twain book cover" width="160" />
+    <Image src={CoverPhillisWheatley} alt="Phillis Wheatley book cover" width="160" />
+    <Image src={CoverPoulAnderson} alt="Poul Anderson book cover" width="160" />
+    <Image src={CoverRALafferty} alt="R. A. Lafferty book cover" width="160" />
+    <Image src={CoverRayBradbury} alt="Ray Bradbury book cover" width="160" />
+    <Image src={CoverRobertSheckley} alt="Robert Sheckley book cover" width="160" />
+    <Image src={CoverWilliamFaulkner} alt="William Faulkner book cover" width="160" />
+    <Image src={CoverWilliamShakespeare} alt="William Shakespear book cover" width="160" />
+  </div>
+</div>

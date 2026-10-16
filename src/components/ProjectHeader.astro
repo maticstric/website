@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  custommargin: string;
+  logo: ImageMetadata;
+}
+
+const { title, subtitle, logo, custommargin } = Astro.props;
+---
+<div class="flex items-start lg:gap-6 gap-4 mb-6">
+  <Image class="lg:w-18 w-15" style={`margin-top: ${custommargin};`} src={logo} alt={`${title} logo`} />
+  <div class="flex flex-col">
+    <h2>{title}</h2>
+    <p>{subtitle}</p>
+  </div>
+</div>
