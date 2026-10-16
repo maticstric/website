@@ -8,7 +8,13 @@ import ProjectHeader from './ProjectHeader.astro';
   <ProjectHeader title="Differential Cryptanalysis" subtitle="Master’s project" logo={DifferentialCryptanalysisLogo} custommargin="5px" />
   <p>
     Differential cryptanalysis is a subtle, beautiful, and powerful method of breaking some of the world’s strongest ciphers.
-    Unfortunately, the resources for education about this technique are sparse. Ones that do exist are very difficult to understand, especially for beginners to cryptography.
-    The purpose behind this tutorial, my Master’s project, is to introduce this amazing tecnique to beginners through an interactive, self-contained webpage which makes no assumptions about prior knowledge.
+    Despite its significance, educational resources on the subject are scarce, and those that do exist can be difficult to follow, particularly for readers new to cryptography.
+    This tutorial, developed as my Master’s project, aims to bridge that gap by introducing differential cryptanalysis to beginners through an interactive, self-contained webpage that requires no prior knowledge of the subject.
+  </p>
+  <p>
+    Alongside the tutorial, I developed a small HTML component library in C and three Python implementations of differential cryptanalysis.
+    The first demonstrates the technique against a simple toy cipher.
+    The second applies it to a more complex substitution-permutation network (SPN) cipher, prioritizing readability over efficiency.
+    The third provides a more sophisticated implementation, demonstrating a practical approach to attacking generic SPN ciphers.
   </p>
 </div>
