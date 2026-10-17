@@ -30,19 +30,69 @@ import CoverWilliamShakespeare from '../assets/images/covers/cover-william-shake
     Besides producing books, I have been able to contribute to this open source software which makes book production a smooth experience, even for non-technically minded producers.
     After producing a few books, I was also promoted the a reviewer which involved helping new contirbutors through their first productions and signing off on them before handing them over for a final inspection.
   </p>
-  <div class="mt-10 grid gap-8 grid-cols-[repeat(auto-fit,minmax(150px,1fr))]">
+  <div id="covers" class="mt-10 grid gap-8 grid-cols-[repeat(auto-fit,minmax(150px,1fr))]">
     <Image src={CoverAgathaChristie} alt="Agatha Christie book cover" />
+    <Image src={CoverRobertSheckley} alt="Robert Sheckley book cover" />
     <Image src={CoverErnestHemingway} alt="Ernest Hemingway book cover" />
+    <Image src={CoverPhillisWheatley} alt="Phillis Wheatley book cover" />
+    <Image src={CoverWilliamShakespeare} alt="William Shakespeare book cover" />
+    <Image src={CoverRayBradbury} alt="Ray Bradbury book cover" />
     <Image src={CoverFritzLeiber} alt="Fritz Leiber book cover" />
     <Image src={CoverHPLovecraft} alt="H.P. Lovecraft book cover" />
     <Image src={CoverHarrietEWilson} alt="Harriet E. Wilson book cover" />
     <Image src={CoverMarkTwain} alt="Mark Twain book cover" />
-    <Image src={CoverPhillisWheatley} alt="Phillis Wheatley book cover" />
     <Image src={CoverPoulAnderson} alt="Poul Anderson book cover" />
     <Image src={CoverRALafferty} alt="R. A. Lafferty book cover" />
-    <Image src={CoverRayBradbury} alt="Ray Bradbury book cover" />
-    <Image src={CoverRobertSheckley} alt="Robert Sheckley book cover" />
     <Image src={CoverWilliamFaulkner} alt="William Faulkner book cover" />
-    <Image src={CoverWilliamShakespeare} alt="William Shakespear book cover" />
   </div>
+  <h3>
+    <button id="view-all-button" class="mt-6" />
+  </h3>
 </div>
+
+<script>
+
+const default_num = 6
+const view_all_text = "View all ↙"
+const show_less_text = "Show less ↗"
+const view_all_button = document.getElementById('view-all-button');
+
+const covers = document.getElementById('covers');
+
+if (view_all_button) {
+  view_all_button.textContent = view_all_text
+
+  view_all_button.addEventListener('click', () => {
+    toggle_extra_cover_visibility()
+  });
+}
+
+if (covers) {
+  Array.from(covers.children).forEach((cover, i) => {
+    if (i > default_num - 1) {
+      cover.classList.add('hidden')
+    }
+  });
+}
+
+
+function toggle_extra_cover_visibility() {
+  const covers = document.getElementById('covers');
+
+  if (covers) {
+    Array.from(covers.children).forEach((cover, i) => {
+      if (i > default_num - 1) {
+        cover.classList.toggle('hidden')
+      }
+    });
+
+    if (view_all_button) {
+      if (view_all_button.textContent === view_all_text) {
+        view_all_button.textContent = show_less_text
+      } else {
+        view_all_button.textContent = view_all_text
+      }
+    }
+  }
+}
+</script>
