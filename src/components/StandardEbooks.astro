@@ -21,16 +21,16 @@ import CoverWilliamShakespeare from '../assets/images/covers/cover-william-shake
 <div>
   <ProjectHeader title="Standard Ebooks" subtitle="Producing public-domain ebooks" logo={StandardEbooksLogo} custommargin="3px" />
   <p>
-    Standard Ebooks is a volunteer-run project which produces free and open source editions of public domain ebooks.
-    It’s a really amazing organization which combines my love of open source software with my love of reading, especially books which are in the public domain.
-    Producing a book for Standard Ebooks involves following a rigorous and modern style manual to ensure they meet a professional-grade and consistent typographical standard.
+    Standard Ebooks is a volunteer-run project that produces free, open-source editions of public domain ebooks.
+    It’s an organization close to my heart that brings together two of my passions: open-source software and reading, especially the classics that have entered the public domain.
+    Each book follows a rigorous, modern style manual, which ensures a consistent, professional-grade typographic standard.
   </p>
   <p>
-    At the heart of book production is a command line application which helps the producer automate certain steps.
-    Besides producing books, I have been able to contribute to this open source software which makes book production a smooth experience, even for non-technically minded producers.
-    After producing a few books, I was also promoted the a reviewer which involved helping new contirbutors through their first productions and signing off on them before handing them over for a final inspection.
+    At the heart of the process is a command-line tool that automates many of the routine steps.
+    In addition to producing books, I’ve contributed to this software, helping make the process smooth for contributors without a technical background.
+    After producing a few books, I was promoted to reviewer, a role that involves guiding new contributors through their first productions and signing off on their work before it moves on for final inspection.
   </p>
-  <div id="covers" class="mt-10 grid gap-8 grid-cols-[repeat(auto-fit,minmax(150px,1fr))]">
+  <div id="covers" class="mt-10 grid gap-8 grid-cols-[repeat(auto-fit,minmax(min(150px,calc((100%-2rem)/2)),1fr))]">
     <a href="https://standardebooks.org/ebooks/agatha-christie/poirot-investigates" target="_blank">
       <Image src={CoverAgathaChristie} alt="Agatha Christie book cover" />
     </a>
@@ -72,48 +72,40 @@ import CoverWilliamShakespeare from '../assets/images/covers/cover-william-shake
     </a>
   </div>
   <h3>
-    <button id="view-all-button" class="mt-6">View all ↙</button>
+    <button id="view-all-button" class="mt-6 cursor-pointer">View all ↙</button>
   </h3>
 </div>
 
 <script>
+const VISIBLE_ROWS = 2
+const VIEW_ALL_TEXT = "View all ↙"
+const SHOW_LESS_TEXT = "Show less ↗"
 
-const default_num = 6
-const view_all_text = "View all ↙"
-const show_less_text = "Show less ↗"
-const view_all_button = document.getElementById('view-all-button');
+const view_all_button = document.getElementById('view-all-button')!
+const covers = document.getElementById('covers')!
 
-const covers = document.getElementById('covers');
+window.addEventListener('resize', update_cover_visibility)
+view_all_button?.addEventListener('click', toggle_extra_cover_visibility)
 
-view_all_button?.addEventListener('click', () => {
-  toggle_extra_cover_visibility()
-});
+update_cover_visibility()
 
-if (covers) {
+function update_cover_visibility() {
+  const show_all = view_all_button?.textContent === SHOW_LESS_TEXT
+
   Array.from(covers.children).forEach((cover, i) => {
-    if (i > default_num - 1) {
-      cover.classList.add('hidden')
-    }
-  });
+    cover.classList.toggle('hidden', !show_all && i >= column_count() * VISIBLE_ROWS)
+  })
 }
 
 function toggle_extra_cover_visibility() {
-  const covers = document.getElementById('covers');
+  view_all_button.textContent = view_all_button.textContent === VIEW_ALL_TEXT ? SHOW_LESS_TEXT : VIEW_ALL_TEXT
 
-  if (covers) {
-    Array.from(covers.children).forEach((cover, i) => {
-      if (i > default_num - 1) {
-        cover.classList.toggle('hidden')
-      }
-    });
+  update_cover_visibility()
+}
 
-    if (view_all_button) {
-      if (view_all_button.textContent === view_all_text) {
-        view_all_button.textContent = show_less_text
-      } else {
-        view_all_button.textContent = view_all_text
-      }
-    }
-  }
+function column_count(): number {
+  if (!covers) return 1
+
+  return getComputedStyle(covers).gridTemplateColumns.split(' ').length
 }
 </script>
