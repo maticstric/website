@@ -7,31 +7,29 @@ import Daedalus from './Daedalus.astro';
 import Ebukafy from './Ebukafy.astro';
 ---
 <main class="lg:ml-115 lg:pt-24">
-  <section id="about" class="space-y-4">
+  <section id="about" class="lg:px-4 space-y-4">
       <h3 class="block lg:hidden">ABOUT</h3>
-      <p class="lg:px-4">I'm a software engineer who enjoys building clean, functional interfaces — the kind of thing that looks simple on the surface but has a surprising amount of thought behind the details. I care about writing code that's still easy to read six months later, which usually means more time spent naming things well than actually writing logic.</p>
-      <p class="lg:px-4">Lately I've been exploring how far I can push a simple design system before it stops being simple, and I have a habit of turning "quick weekend projects" into small obsessions that take three weeks longer than planned.</p>
-      <p class="lg:px-4">When I'm not at a keyboard, I'm probably applying that same instinct to some other hobby — figuring out the most needlessly precise way to do something that didn't need to be precise at all.</p>
+      <p>I'm a software engineer who enjoys building clean, functional interfaces — the kind of thing that looks simple on the surface but has a surprising amount of thought behind the details. I care about writing code that's still easy to read six months later, which usually means more time spent naming things well than actually writing logic.</p>
+      <p>Lately I've been exploring how far I can push a simple design system before it stops being simple, and I have a habit of turning "quick weekend projects" into small obsessions that take three weeks longer than planned.</p>
+      <p>When I'm not at a keyboard, I'm probably applying that same instinct to some other hobby — figuring out the most needlessly precise way to do something that didn't need to be precise at all.</p>
   </section>
-  <section class="px-4 lg:mt-28 lg:mb-8 mt-16">
-    <h3 class="block lg:hidden">PROJECTS</h3>
+  <section class="lg:px-4 lg:mt-28 lg:mb-8 mt-16">
+    <h3 class="block lg:hidden mb-4">PROJECTS</h3>
     <section id="differential-cryptanalysis">
       <DifferentialCryptanalysis />
     </section>
-    <section id="standard-ebooks" class="lg:mt-28 lg:mb-8 mt-16">
+    <section id="standard-ebooks" class="lg:mt-16 lg:mb-8 mt-16">
       <StandardEbooks />
     </section>
-    <section id="ebukafy" class="lg:mt-28 lg:mb-8 mt-16">
-      <h3 class="block">ebukafy</h3>
+    <section id="ebukafy" class="lg:mt-16 lg:mb-8 mt-16">
       <Ebukafy />
     </section>
-    <section id="daedalus" class="lg:mt-28 lg:mb-8 mt-16">
-      <h3 class="block">daedalus</h3>
+    <section id="daedalus" class="lg:mt-16 lg:mb-8 mt-16">
       <Daedalus />
     </section>
   </section>
-  <section id="resume" class="lg:mt-28 lg:mb-8 mt-16">
-    <h3 class="block lg:hidden">RESUME</h3>
+  <section id="resume" class="lg:px-4 lg:mt-28 lg:mb-8 mt-16">
+    <h3 class="block lg:hidden mb-4">RESUME</h3>
     <TimelineEntry
       title="MSc in Computer Science"
       organization="University of California, Davis"
@@ -83,42 +81,6 @@ import Ebukafy from './Ebukafy.astro';
       endDate="Jul 2017"
       description="Contributed to the Android and iOS apps used for access node provisioning, implementing GUI and functional improvements that enhanced usability, readability, and power efficiency. Also restructured the codebase to streamline Flurry integration for data analysis."
       tags={["Java", "Swift"]}
-    />
-  </section>
-  <span class="hidden lg:flex justify-center text-2xl">⁂</span>
-  <section id="projects" class="lg:my-8 mt-16">
-    <h3 class="block lg:hidden">PROJECTS</h3>
-    <TimelineEntry
-      title="tag"
-      startDate="Jul 2024"
-      endDate="Aug 2024"
-      description="A two player, local-multiplayer tag game made by me in three weeks for the Portland Indie Game Squad 2024 Summer Slow Jams."
-      tags={["Godot", "Game Jam", "Game Development"]}
-      link="https://maticstric.itch.io/tag"
-    />
-    <TimelineEntry
-      title="Differential Cryptanalysis Tutorial"
-      startDate="Sep 2021"
-      endDate="Nov 2022"
-      description="My Master's project. A tutorial on an advanced technique used to break symmetric key block ciphers. In contrast to other tutorials of the technique, it is interactive, uses simple language, avoids math notation, and is aimed at amateur cryptographers."
-      tags={["Python", "C", "JavaScript", "HTML", "CSS", "Cryptography"]}
-      link="https://maticstric.github.io/differential-cryptanalysis-tutorial/"
-    />
-    <TimelineEntry
-      title="daedalus"
-      startDate="Feb 2021"
-      endDate="Apr 2021"
-      description="A website built with React which showcases different algorithms for maze generation with adjustable maze size and ability to step and play through the generation. Includes Randomized Depth First Search, Randomized Kruskal’s Algorithm, Randomized Prim’s Algorithm, and Wilson’s Algorithm."
-      tags={["React", "JavaScript"]}
-      link="https://maticstric.github.io/daedalus/"
-    />
-    <TimelineEntry
-      title="ebukafy"
-      startDate="Jan 2021"
-      endDate="Apr 2021"
-      description="A collection of tools used to convert html or text files into EPUB ebooks with over 3000 downloads in npm."
-      tags={["JavaScript", "EPUB", "Open Source"]}
-      link="https://www.npmjs.com/package/ebukafy"
     />
   </section>
   <Footer />

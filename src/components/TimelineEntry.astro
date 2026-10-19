@@ -14,7 +14,7 @@ const { title, organization, startDate, endDate = "Present", description, tags =
 const AOrDiv = link ? "a" : "div";
 ---
 
-<div class={`relative flex lg:px-8 lg:py-4 lg:my-2 mb-8 mt-4 border rounded border-transparent ${link ? "lg:hover:border-highlight" : ""}`}>
+<div class={`relative flex lg:px-8 lg:py-4 lg:my-2 mb-8 border rounded border-transparent ${link ? "lg:hover:border-highlight" : ""}`}>
   <div class="hidden lg:block lg:flex-none lg:w-45">
     <span class="text-sm text-text-secondary">{startDate} – {endDate}</span>
   </div>
