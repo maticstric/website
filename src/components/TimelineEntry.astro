@@ -22,15 +22,15 @@ const AOrDiv = link ? "a" : "div";
     {
       link ? (
         <a href={link} target="_blank" class="lg:after:absolute lg:after:inset-0">
-          <h3>
+          <h2>
             {title}
             <span class="lg:hidden ml-2 text-base">↗</span>
-          </h3>
+          </h2>
           <span class="block lg:hidden text-text-secondary">{startDate} – {endDate}</span>
         </a>
       ) : (
         <>
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           <span class="block lg:hidden text-text-secondary">{startDate} – {endDate}</span>
         </>
       )}
