@@ -7,14 +7,17 @@ interface Props {
   subtitle: string;
   custommargin: string;
   logo: ImageMetadata;
+  link: string
 }
 
-const { title, subtitle, logo, custommargin } = Astro.props;
+const { title, subtitle, logo, custommargin, link } = Astro.props;
 ---
-<div class="flex items-start lg:gap-6 gap-4 mb-6">
-  <Image class="lg:w-18 w-15" style={`margin-top: ${custommargin};`} src={logo} alt={`${title} logo`} />
-  <div class="flex flex-col">
-    <h2>{title}</h2>
-    <p>{subtitle}</p>
+<a href=`${link}` target="_blank" class="inline-block transition-transform duration-120 ease-out hover:scale-105">
+  <div class="flex items-start lg:gap-6 gap-4 mb-6">
+      <Image class="lg:w-18 w-15" style={`margin-top: ${custommargin};`} src={logo} alt={`${title} logo`} />
+      <div class="flex flex-col">
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+      </div>
   </div>
-</div>
+</a>

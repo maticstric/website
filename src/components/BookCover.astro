@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  cover: ImageMetadata;
+  link: string;
+  alt: string;
+}
+
+const { cover, link, alt } = Astro.props;
+---
+<a href=`${link}` target="_blank" class="transition-transform duration-120 ease-out hover:scale-105">
+  <Image src={cover} alt=`${alt}` />
+</a>
