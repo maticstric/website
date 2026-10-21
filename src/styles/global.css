@@ -11,11 +11,20 @@
   --color-text-tertiary: #2d3740;
   --color-highlight: #d9a441;
   */
+  /*
   --color-background: #ffffff;
   --color-text: #000000;
   --color-text-secondary: #000000;
   --color-text-tertiary: #000000;
   --color-highlight: #888888;
+  */
+  
+  --color-background: #faf5ec;
+  --color-background-secondary: #f1e7d6;
+  --color-text: #3b2a1f;
+  --color-text-secondary: #7a6552;
+  --color-text-tertiary: #cdbca4;
+  --color-highlight: #c8782a;
 }
 
 p:not(:last-child) {

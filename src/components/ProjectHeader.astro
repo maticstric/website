@@ -8,16 +8,24 @@ interface Props {
   custommargin: string;
   logo: ImageMetadata;
   link: string
+  tags?: string[];
 }
 
-const { title, subtitle, logo, custommargin, link } = Astro.props;
+const { title, subtitle, logo, custommargin, link, tags = [] } = Astro.props;
 ---
-<a href=`${link}` target="_blank" class="inline-block transition-transform duration-120 ease-out hover:scale-105">
-  <div class="flex items-start lg:gap-6 gap-4 mb-6">
+<a href=`${link}` target="_blank" class="inline-block transition-transform duration-120 ease-out hover:scale-105 mb-6">
+  <div class="flex items-start lg:gap-6 gap-4 mb-4">
       <Image class="lg:w-18 w-15" style={`margin-top: ${custommargin};`} src={logo} alt={`${title} logo`} />
       <div class="flex flex-col">
         <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <p class="text-text-secondary">{subtitle}</p>
       </div>
   </div>
+  {tags.length > 0 && (
+    <div class="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span class="text-xs font-mono px-2 py-1 border border-highlight rounded">{tag}</span>
+      ))}
+    </div>
+  )}
 </a>

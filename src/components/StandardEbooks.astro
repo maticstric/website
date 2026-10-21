@@ -18,7 +18,7 @@ import CoverWilliamFaulkner from '../assets/images/covers/cover-william-faulkner
 import CoverWilliamShakespeare from '../assets/images/covers/cover-william-shakespeare.svg';
 ---
 <div>
-  <ProjectHeader title="Standard Ebooks" subtitle="Producing public-domain ebooks" logo={StandardEbooksLogo} custommargin="3px" link="https://standardebooks.org/" />
+  <ProjectHeader title="Standard Ebooks" subtitle="Producing public-domain ebooks" logo={StandardEbooksLogo} custommargin="3px" link="https://standardebooks.org/" tags={["Python", "EPUB", "Open Source", "Public Domain"]} />
   <p>
     Standard Ebooks is a volunteer-run project that produces free, open-source editions of public domain ebooks.
     It’s an organization close to my heart that brings together two of my passions: open-source software and reading, especially the classics that have entered the public domain.
@@ -27,6 +27,8 @@ import CoverWilliamShakespeare from '../assets/images/covers/cover-william-shake
   <p>
     At the heart of the process is a command-line tool that automates many of the routine steps.
     In addition to producing books, I’ve contributed to this software, helping make the process smooth for contributors without a technical background.
+  </p>
+  <p>
     After producing a few books, I was promoted to reviewer, a role that involves guiding new contributors through their first productions and signing off on their work before it moves on for final inspection.
   </p>
   <div id="covers" class="mt-10 grid gap-8 grid-cols-[repeat(auto-fit,minmax(min(150px,calc((100%-2rem)/2)),1fr))]">
