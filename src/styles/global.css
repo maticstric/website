@@ -3,28 +3,11 @@
 
 @theme inline {
   --font-sans: var(--inter), sans-serif;
-  /*
-  --color-background: #14272b;
-  --color-background-secondary: #232a2b;
-  --color-text: #ece8df;
-  --color-text-secondary: #8fa3b5;
-  --color-text-tertiary: #2d3740;
-  --color-highlight: #d9a441;
-  */
-  /*
-  --color-background: #ffffff;
-  --color-text: #000000;
-  --color-text-secondary: #000000;
-  --color-text-tertiary: #000000;
-  --color-highlight: #888888;
-  */
-  
-  --color-background: #faf5ec;
-  --color-background-secondary: #f1e7d6;
-  --color-text: #3b2a1f;
-  --color-text-secondary: #7a6552;
-  --color-text-tertiary: #cdbca4;
-  --color-highlight: #c8782a;
+
+  --color-background: #f2f0eb;
+  --color-text: #201307;
+  --color-text-secondary: #77614f;
+  --color-highlight: #e68e15;
 }
 
 p:not(:last-child) {
